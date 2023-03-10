@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learnlytica</title>
+
+    <link rel=icon href="assets/img/logo.ico" sizes="20x20" type="image/png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Stylesheet -->
+   
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <style>
+      table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+        </style>
+        <style>
+   * {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+/* #grad1 {
+    background-color:  #9C27B0;
+    background-image: linear-gradient(120deg, #FF4081, #81D4FA)
+} */
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset .form-card {
+   
+    border: 0 none;
+    border-radius: 0px;
+    
+    padding: 20px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+    position: relative
+}
+
+#msform fieldset {
+    
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E
+}
+
+#msform input,
+#msform textarea {
+    padding: 0px 8px 4px 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: skyblue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #000000
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 30%;
+    float: left;
+    position: relative
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f023"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f09d"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: skyblue
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+        
+        </style>
+        <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/1muKCW8Z4I9L8TdO/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+   <!-- preloader area start -->
+   <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+</div>
+<!-- preloader area end -->
+
+<!-- search popup start-->
+
+
+
+
+
+<div class="body-overlay" id="body-overlay"></div>
+
+<!-- navbar start -->
+<div class="navbar-area">
+    
+    <nav class="navbar navbar-area-1 navbar-area navbar-expand-lg">
+        <div class="container nav-container">
+            <div class="responsive-mobile-menu">
+                <button class="menu toggle-btn d-block d-lg-none" data-target="#edumint_main_menu" 
+                aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-left"></span>
+                    <span class="icon-right"></span>
+                </button>
+            </div>
+            <div class="logo">
+                <a href="home.html"><img src="assets/img/black-logo.png" alt="img"></a>
+            </div>
+            <!-- <div class="nav-right-part nav-right-part-mobile">
+                <a class="signin-btn" href="#">Sign In</a>
+                <a class="btn btn-base" href="#">Sign Up</a>
+                <a class="search-bar" href="#"><i class="fa fa-search"></i></a>
+            </div> -->
+            <div class="collapse navbar-collapse" id="edumint_main_menu">
+                <ul class="navbar-nav menu-open">
+                    <!-- <li>
+                        <a href="home.html">Home</a>
+                        
+                    </li> -->
+                    <li>
+                        <a href="sample.html">Blog</a>
+                        
+                    </li>
+                    <li  >
+                        <a href="event.html">Webinar</a>
+                    
+                    </li>
+                    <!-- <li  >
+                        <a href="sample.html" >VBlogs </a>
+                         
+                    </li> -->
+                    <li><a href="veteran.html">Veteran Services</a></li>
+                    <!-- <li class="menu-item-has-children current-menu-item">
+                        <a href="#">Services</a>
+                        <ul class="sub-menu">
+                            <li><a href="lmspage.html" >CorporateTraining</a></li>
+                            <li><a href="veteran.html">Veteran Services</a></li>
+                            <li><a href="contentdevelopment.html">Content Development</a></li>
+                        </ul>
+                    </li> -->
+
+
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li  >
+                        <a href="https://trainsoft.live/" class="btn btn-base b-animate-3 " style="color: #fff;" target="_blank">LMS</a>
+                    
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-right-part nav-right-part-desktop">
+                <!-- <a class="signin-btn" href="">Sign In</a>
+                <a class="btn btn-base "  href="" style="color: #f0f4f9;" >Sign Up</a>
+                <a class="search-bar" href="#"><i class="fa fa-search"></i></a> -->
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+ <div class="blog-area pd-top-120 pd-bottom-120 bg-gray" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    
+
+                    <h5>Cloud Computing</h5>
+                    <table>
+                        <tr>
+                            <th>Webinar</th>
+                            <th>Duration</th>
+                            
+                            <th>Start Date</th>
+                            <!-- <th>Register</th> -->
+                        </tr>
+                        <tr>
+                          <td>Mastering the Cloud: Best Practices for Cloud Computing and Management</td>
+                          <td> <i class="fa fa-calendar" aria-hidden="true" style="color: #DB3166;"></i>&nbsp; 8 Hours</td>
+                          <td><i class="fa fa-calendar-check-o" aria-hidden="true" style="color: #DB3166;"></i>&nbsp;&nbsp;01-April-2023</td>
+                          <!-- <td><a href="" data-toggle="modal" data-target="#exampleModalLong">Register</a></td> -->
+                        </tr>
+                     
+                      </table>
+                    
+                    
+  
+  
+  
+                      <h5 style="margin-top: 100px;">Cyber Security</h5>
+  
+                      <table>
+                        <tr>
+                            <th>Webinar</th>
+                            <th>Duration</th>
+                            
+                            <th>Start Date</th>
+                            <!-- <th>Register</th> -->
+                        </tr>
+                        <tr>
+                          <td>Securing Your Digital World: Essential Cyber Security Tips and Strategies</td>
+                          <td> <i class="fa fa-calendar" aria-hidden="true" style="color: #DB3166;"></i>&nbsp; 10 Hours</td>
+                          <td><i class="fa fa-calendar-check-o" aria-hidden="true" style="color: #DB3166;"></i>&nbsp;&nbsp;22-Mar-2023</td>
+                          <!-- <td><a href="" data-toggle="modal" data-target="#exampleModalLong" >Register</a></td> -->
+                        </tr>
+                     
+                      </table>
+  
+  
+                   
+                  
+                </div>
+
+
+
+
+
+                <div class="col-lg-4 col-12" style="margin-top: 35px;">
+                    <div class="td-sidebar">
+                     
+                                     
+                        <div class="widget widget-recent-post">                            
+                            <!-- <h4 class="widget-title">Recent News</h4> -->
+                            <ul>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <!-- <img src="/assets/img/course/2.png" alt="blog"> -->
+                                        </div>
+                                        <div class="media-body align-self-center " >
+
+                                            <form id="myForm">
+                                         
+                                         
+                                                <label  >I'm intrested in :</label>
+                                            <select name="Learning" id="Learning" class="form-control" value="" required>
+                                                <option value="">--Select--</option>
+                                                <option value="ComplianceTraining">Mastering the Cloud: Best Practices for Cloud Computing and Management</option>
+                                                <option value="LeadershipBusinessTraining">Securing Your Digital World: Essential Cyber Security Tips and Strategies</option>
+                                               
+                                              </select>
+                                            
+                                                <label style="padding-top: 10px; ">Learning Role :</label>
+                                                <select name="Learningrole" id="Learning" class="form-control" value="" required>
+                                                    <option value="">--Select--</option>
+                                                    <option value="I'm responsible for my own training">I'm responsible for my own training</option>
+                                                    <option value="I'm responsible for my department's training">I'm responsible for my department's training</option>
+                                                    <option value="I'm responsible for my organization's training">I'm responsible for my organization's training</option>
+                                                    <option value="I'm responsible for the learning administrative function of my organization" >I'm responsible for the learning administrative function of my organization</option>
+                                                  </select>
+                                          
+                                         
+                                       
+
+
+                                            <label style="padding-top: 10px;">Name :</label>
+                                            <input type="text" class="form-control" name="Name" placeholder="Full name" value="" required="">
+            
+                                            <label style="padding-top: 10px;">Email :</label>
+                                            <input type="email" name="Email" class="form-control" placeholder="example@gmail.com" value="" required="">
+                                      
+                                            
+                                            <label style="padding-top: 10px;">Message:</label>
+                                            <textarea type="text" name="Message" class="form-control" placeholder="Message" value="" required=""></textarea>
+            
+                                           
+            
+                                      
+            
+            
+                                                   
+                                            </form>
+                                            <button  name="submit" onclick="SubForm()" style="cursor: pointer; width: 120px;height: 50px; border: none; margin-top: 10px;font-size: 20px;color: white;background-color: #3062a0;border-radius: 5px;">Submit</button>
+                                        </div>
+                                    </div>
+                                </li>
+                              
+                            </ul>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+    
+
+
+
+   
+
+
+<div class="back-to-top">
+    <span class="back-top"><i class="fa fa-angle-up"></i></span>
+</div>
+<!-- back to top area end -->
+
+
+<!-- all plugins here -->
+<script src="assets/js/vendor.js"></script>
+<!-- main js  -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
