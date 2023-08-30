@@ -3406,6 +3406,9 @@ background-size: cover;
 .institute-slider .item img {
   width: auto;
   margin: auto;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+ 
 }
 .institute-slider .owl-nav {
   display: none;
